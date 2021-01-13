@@ -1,3 +1,4 @@
+import { PostsService } from './services/posts.service';
 import { PostsComponent } from './posts/posts.component';
 import { SummaryPipe } from './summary.pipe';
 import { AuthorsService } from './authors.service';
@@ -37,7 +38,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [CoursesService, AuthorsService],
+  providers: [CoursesService, AuthorsService, PostsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
