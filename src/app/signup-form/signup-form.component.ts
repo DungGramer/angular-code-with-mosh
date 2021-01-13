@@ -21,6 +21,13 @@ export class SignupFormComponent {
     ]),
   });
 
+  // tslint:disable-next-line:typedef
+  login() {
+    this.form.setErrors({
+      invalidLogin: true,
+    });
+  }
+
   get username(): any {
     return this.form.get('username');
   }
