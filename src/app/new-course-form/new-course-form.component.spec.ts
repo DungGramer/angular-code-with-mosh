@@ -11,9 +11,8 @@ describe('NewCourseFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewCourseFormComponent ]
-    })
-    .compileComponents();
+      declarations: [NewCourseFormComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
