@@ -13,6 +13,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { TitleComponent } from './title/title.component';
 import { TitleCasePipe } from './title-case.pipe';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     TitleComponent,
     TitleCasePipe,
     SignupFormComponent,
+    NewCourseFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [CoursesService, AuthorsService],
