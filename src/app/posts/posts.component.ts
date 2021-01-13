@@ -26,4 +26,21 @@ export class PostsComponent implements OnInit {
       console.log(res);
     });
   }
+
+  updatePost(post): void {
+    this.http
+      .patch(this.url + '/' + post.id, JSON.stringify({ isRead: true }))
+      .subscribe((res) => {
+        console.log(res);
+      });
+    // this.http.put(this.url, JSON.stringify(post));
+  }
+
+  deletePost(post): void {
+    this.http.delete(this.url + '/' + post.id).subscribe((res) => {
+      const index = this.posts.indexOf(post);
+      this.posts.splice(index, 1);
+      console.log(res);
+    });
+  }
 }

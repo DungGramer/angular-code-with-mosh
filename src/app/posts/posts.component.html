@@ -5,5 +5,13 @@
   class="form-control"
 />
 <ul class="list-group">
-  <li *ngFor="let item of posts" class="list-group-item">{{ item.title }}</li>
+  <li *ngFor="let item of posts" class="list-group-item">
+    <button (click)="updatePost(item)" class="btn btn-default btn-sm">
+      Update
+    </button>
+    <button (click)="deletePost(item)" class="btn btn-default btn-sm">
+      Delete
+    </button>
+    {{ item.title }}
+  </li>
 </ul>
