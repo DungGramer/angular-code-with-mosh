@@ -11,9 +11,16 @@ export class PostsComponent implements OnInit {
   constructor(private postsService: PostsService) {}
 
   ngOnInit(): void {
-    this.postsService.getPosts().subscribe((response) => {
-      this.posts = response;
-    });
+    this.postsService.getPosts().subscribe(
+      (response) => {
+        this.posts = response;
+      },
+      (error: Response) => {
+        if (error.status === 404) alert('This post already ');
+        alert('An unexpected error occurred.');
+        console.log(error);
+      }
+    );
   }
 
   createPost(input: HTMLInputElement): void {
